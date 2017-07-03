@@ -8,6 +8,23 @@
 	<script src="js/lib.js"></script>
 	<script>window.sr=ScrollReveal({duration:900,origin:"top",distance:"2em",scale:1,easing:"cubic-bezier(.01,.88,.63,1)"})</script>
 </head>
+<body class="grid">
+	<script>
+        	$(document).ready(function(){
+                $("body").backgroundCycle({
+                    imageUrls: [
+                        'bg/1.jpg',
+                        'bg/2.jpg',
+                        'bg/3.jpg',
+                        'bg/4.jpg',
+                        'bg/5.jpg'
+                    ],
+                    fadeSpeed: 2000,
+                    duration: 3000,
+                    backgroundSize: 2
+                });
+            })
+	</script>
 	<div class="popup-base">
 		<div class="popup" id="about">
 			<div class="ionicon close"><a href="/" onclick="return closepopup()">&#xf2d7;</a></div>
@@ -32,8 +49,6 @@
 			</li>
 		</div>
 	</div>
-
-<body class="grid">
 	<div class="grid topbar">
 			<div class="unit half center-on-mobiles logo scale"><img src="logo.gif" width="276"></div>
 			<div class="unit half center-on-mobiles soclinks">
