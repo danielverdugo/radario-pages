@@ -1,5 +1,5 @@
 $font: 'Open Sans',sans-serif;
-$accent-color: #35BEF9;
+$accent-color: #E3B529;
 @import "fonts";
 
 .backstretch-item img{width:100%}
@@ -262,7 +262,7 @@ cursor:pointer
 }
 
 
-.address {color:#fff;background-color:#02A5EB;height:330px;padding:1.2em 2em 2em}
+.address {background-color:$accent-color;height:420px;padding:1.2em 2em 2em}
 .address a {color:#fff;border-bottom:1px solid rgba(#fff, .3)}
 .address a:hover {color:#fff;border-bottom:1px solid rgba(#fff, .8)}
 
