@@ -32,8 +32,7 @@ $.fn.backgroundCycle = function(options) {
     }
 
     var contents = $(document.createElement('div'));
-    var captions = $(document.createElement('div'));
-    captions.attr('id','captions')
+
 
     var children = this.children().detach();
     contents.append(children);
@@ -49,11 +48,6 @@ $.fn.backgroundCycle = function(options) {
         image.attr('id', id);
         image.attr('class', cssClass);
 
-        var caption = $(document.createElement('img'));
-        caption.attr('src',src.slice(0,-3)+'png')
-        caption.attr('id', 'cap'+id);
-        caption.attr('class', 'cap'+cssClass);
-        captions.append(caption)
 
         var sizeMode;
 
@@ -101,16 +95,11 @@ $.fn.backgroundCycle = function(options) {
         bottom: marginBottom
     });
 
-    captions.css({
-    	position: 'relative',
-    })
 
-    this.append(contents).children(':first').hide().fadeIn(900);
-    $('.title-img').prepend(captions).children(':first').hide().fadeIn(900);
+    this.append(contents).children(':first').hide().fadeIn(100);
     $('.cycle-bg-image').hide();
     $('.capcycle-bg-image').hide();
     $('#' + imageIds[0]).show();
-    $('#cap' + imageIds[0]).show();
     setInterval(cycleToNextImage, settings.duration);
 };
 
@@ -129,6 +118,4 @@ function cycleToNextImage() {
 
     $('#' + previousImageId).fadeTo(options,0);
     $('#' + imageIds[currentImageIndex]).fadeTo(options,1);
-    $('#cap' + previousImageId).fadeTo(options,0);
-    $('#cap' + imageIds[currentImageIndex]).fadeTo(options,1);
 }
